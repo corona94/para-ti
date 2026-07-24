@@ -1,0 +1,32 @@
+.music-prompt{
+    position:fixed;
+    top:clamp(1rem, 4vh, 1.75rem);
+    left:50%;
+    z-index:50;
+    transform:translateX(-50%);
+    padding:0.7rem 1.1rem;
+    border:1px solid rgba(214, 211, 209, 0.95);
+    border-radius:999px;
+    background:rgba(255, 255, 255, 0.92);
+    color:#44403c;
+    font-size:0.92rem;
+    letter-spacing:0.02em;
+    cursor:pointer;
+    box-shadow:0 12px 28px rgba(68, 64, 60, 0.12);
+    backdrop-filter:blur(8px);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.music-prompt:hover{
+    transform:translateX(-50%) translateY(-1px);
+    background:#fff;
+    box-shadow:0 16px 32px rgba(68, 64, 60, 0.16);
+}
+
+.music-prompt:focus-visible{
+    outline:2px solid #fb7185;
+    outline-offset:2px;
+}

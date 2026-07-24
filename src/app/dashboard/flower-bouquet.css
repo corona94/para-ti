@@ -1,0 +1,76 @@
+:host{
+    position:relative;
+    top:auto;
+    left:auto;
+    right:auto;
+    z-index:2;
+    width:100%;
+    max-width:var(--side-decor-width, clamp(8rem, 22vw, 13rem));
+    opacity:0.88;
+    transform:none;
+    pointer-events:none;
+    justify-self:center;
+    align-self:center;
+}
+
+:host(.flower-bouquet--right){
+    transform:scaleX(-1);
+}
+
+.bouquet-svg{
+    width:100%;
+    height:auto;
+    display:block;
+    overflow:visible;
+    animation:bouquetSway 6s ease-in-out infinite;
+    transform-origin:50% 90%;
+}
+
+.bouquet-stem{
+    stroke:#4d7c0f;
+    stroke-width:2.5;
+    stroke-linecap:round;
+    fill:none;
+}
+
+.bouquet-leaf{
+    fill:#84cc16;
+    opacity:0.85;
+}
+
+.bouquet-wrap{
+    fill:#fafaf9;
+    stroke:#e7e5e4;
+    stroke-width:1;
+}
+
+.bouquet-flower{
+    transform-box:fill-box;
+    transform-origin:center;
+    animation:bouquetBloom 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay:var(--bloom-delay, 0s);
+    opacity:0;
+    transform:scale(0.4);
+}
+
+@keyframes bouquetSway{
+    0%, 100%{ transform:rotate(-1.2deg); }
+    50%{ transform:rotate(1.2deg); }
+}
+
+@keyframes bouquetBloom{
+    0%{
+        opacity:0;
+        transform:scale(0.35) translateY(8px);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+@media (max-width: 640px){
+    :host{
+        opacity:0.75;
+    }
+}

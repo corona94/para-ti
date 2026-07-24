@@ -1,0 +1,171 @@
+<div class="bg-gradient-to-b from-white via-stone-50 to-stone-100">
+
+    @for (item of story; track sectionIndex; let sectionIndex = $index) {
+
+        <section
+            class="story-section min-h-screen flex flex-col justify-center items-center px-4 sm:px-6"
+            [class.story-section--decorated]="item.corners?.length"
+            [class.story-section--gallery]="item.gallery?.length"
+            [class.story-section--bouquets]="item.bouquets"
+            [class.story-section--hearts]="item.hearts"
+            [class.story-section--storm]="item.storm"
+            [class.story-section--playlist]="item.playlist?.length"
+            [attr.data-section-index]="sectionIndex">
+
+            @if (item.bouquets) {
+
+                <app-flower-bouquet side="left" />
+
+                <app-flower-bouquet side="right" />
+
+            }
+
+            @if (item.hearts) {
+
+                <app-side-hearts side="left" />
+
+                <app-side-hearts side="right" />
+
+            }
+
+            @if (item.storm) {
+
+                <app-side-storm side="left" />
+
+                <app-side-storm side="right" />
+
+            }
+
+            @if (item.corners) {
+
+                @for (corner of item.corners; track corner.src) {
+
+                    <img
+                        [class]="cornerClass(corner.position)"
+                        [class.corner-image--visible]="startedSections().has(sectionIndex)"
+                        [src]="corner.src"
+                        [alt]="corner.alt"
+                        loading="lazy"
+                        decoding="async" />
+
+                }
+
+            }
+
+            <div class="story-content">
+
+                @if (item.gallery?.length) {
+
+                    <div
+                        class="photo-gallery"
+                        [class.photo-gallery--single]="item.gallery!.length === 1"
+                        [class.photo-gallery--two]="item.gallery!.length === 2"
+                        [class.photo-gallery--three]="item.gallery!.length === 3"
+                        [class.photo-gallery--four]="item.gallery!.length === 4"
+                        [class.photo-gallery--visible]="startedSections().has(sectionIndex)">
+
+                        @for (photo of item.gallery; track photo.src; let photoIndex = $index) {
+
+                            @if (photo.type === 'video') {
+
+                                <video
+                                    class="photo-gallery__item photo-gallery__item--video"
+                                    [style.transition-delay]="(photoIndex * 0.12) + 's'"
+                                    [src]="photo.src"
+                                    [attr.aria-label]="photo.alt"
+                                    controls
+                                    playsinline
+                                    preload="metadata"></video>
+
+                            } @else {
+
+                                <img
+                                    class="photo-gallery__item"
+                                    [style.transition-delay]="(photoIndex * 0.12) + 's'"
+                                    [src]="photo.src"
+                                    [alt]="photo.alt"
+                                    loading="lazy"
+                                    decoding="async" />
+
+                            }
+
+                        }
+
+                    </div>
+
+                }
+
+                @for (line of item.lines; track lineIndex; let lineIndex = $index) {
+
+                    @if (usesLetterAnimation(sectionIndex)) {
+
+                        <h1 class="story-line mt-3 sm:mt-4">
+
+                            @for (token of getTokens(line); track token.start) {
+
+                                @if (token.isSpace) {
+
+                                    @for (letra of split(token.text); track charIndex; let charIndex = $index) {
+
+                                        <span
+                                            class="letter"
+                                            [class.animate-letter]="isLetterRevealed(sectionIndex, lineIndex, token.start + charIndex, item.lines)">
+
+                                            {{ letra === ' ' ? '\u00A0' : letra }}
+
+                                        </span>
+
+                                    }
+
+                                } @else {
+
+                                    <span class="word">
+
+                                        @for (letra of split(token.text); track charIndex; let charIndex = $index) {
+
+                                            <span
+                                                class="letter"
+                                                [class.animate-letter]="isLetterRevealed(sectionIndex, lineIndex, token.start + charIndex, item.lines)">
+
+                                                {{ letra }}
+
+                                            </span>
+
+                                        }
+
+                                    </span>
+
+                                }
+
+                            }
+
+                        </h1>
+
+                    } @else {
+
+                        <h1
+                            class="story-line story-line--static mt-3 sm:mt-4"
+                            [class.story-line--dot]="line === '.'"
+                            [class.story-line--number]="isCenterNumber(line)">
+
+                            {{ line }}
+
+                        </h1>
+
+                    }
+
+                }
+
+                @if (item.playlist?.length) {
+
+                    <app-youtube-playlist [videos]="item.playlist!" />
+
+                }
+
+            </div>
+
+        </section>
+
+    }
+
+</div>

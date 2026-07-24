@@ -1,0 +1,33 @@
+<div class="youtube-playlist">
+
+    <div class="youtube-playlist__player">
+
+        <div #playerHost class="youtube-playlist__iframe"></div>
+
+    </div>
+
+    <ol class="youtube-playlist__tracks">
+
+        @for (video of videos(); track video.url; let index = $index) {
+
+            <li>
+
+                <button
+                    type="button"
+                    class="youtube-playlist__track"
+                    [class.youtube-playlist__track--active]="selectedIndex() === index"
+                    (click)="selectVideo(index)">
+
+                    <span class="youtube-playlist__index">{{ index + 1 }}</span>
+
+                    <span class="youtube-playlist__title">{{ trackTitle(video, index) }}</span>
+
+                </button>
+
+            </li>
+
+        }
+
+    </ol>
+
+</div>

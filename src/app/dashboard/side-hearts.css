@@ -1,0 +1,75 @@
+:host{
+    position:relative;
+    top:auto;
+    left:auto;
+    right:auto;
+    z-index:2;
+    width:100%;
+    max-width:var(--side-decor-width, clamp(3.5rem, 10vw, 5.5rem));
+    opacity:0.82;
+    transform:none;
+    pointer-events:none;
+    justify-self:center;
+    align-self:center;
+}
+
+.hearts-svg{
+    width:100%;
+    height:auto;
+    display:block;
+    overflow:visible;
+}
+
+.heart{
+    transform-box:fill-box;
+    transform-origin:center;
+    animation:heartAppear 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+               heartFloat 4.5s ease-in-out infinite;
+    animation-delay:var(--heart-delay, 0s), calc(var(--heart-delay, 0s) + 1.2s);
+    opacity:0;
+    transform:scale(0.5);
+}
+
+.heart path{
+    stroke:rgba(159, 18, 57, 0.35);
+    stroke-width:0.6;
+    stroke-linejoin:round;
+}
+
+.heart--lg{
+    animation-duration:1.2s, 5s;
+}
+
+.heart--md{
+    animation-duration:1.2s, 4.2s;
+}
+
+.heart--sm{
+    animation-duration:1.2s, 3.6s;
+}
+
+@keyframes heartAppear{
+    0%{
+        opacity:0;
+        transform:scale(0.4) translateY(10px);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+@keyframes heartFloat{
+    0%, 100%{
+        transform:scale(1) translateY(0);
+    }
+    50%{
+        transform:scale(1.04) translateY(-4px);
+    }
+}
+
+@media (max-width: 640px){
+    :host{
+        opacity:0.7;
+    }
+}
