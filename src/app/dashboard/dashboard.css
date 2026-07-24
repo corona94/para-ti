@@ -359,11 +359,15 @@
 }
 
 .story-line--dot{
-    font-size:clamp(2rem, 7vw, 3.5rem);
+    display:inline-flex;
+    justify-content:center;
+    font-size:clamp(2.5rem, 9vw, 5rem);
+    font-weight:900;
     line-height:0.85;
     margin-top:0.15rem;
     color:#78716c;
     letter-spacing:0;
+    transform:scaleX(2.4);
 }
 
 .story-line--number{
