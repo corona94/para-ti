@@ -97,8 +97,12 @@ export class Dashboard {
     lines: ['Fueron meses muy difíciles para mí, pero cuando estaba contigo, mi mundo cambiaba...'],
     bouquets: true,
   },
+  
   {
-    lines: ['No vengo a pedirte una repuesta o que hablemos ya; solo a recordarte que mi corazón sigue eligiéndote'],
+    lines: [
+      'Sé que llegará el momento en que nuestras miradas vuelvan a encontrarse.',
+      'Hasta entonces, solo quiero que recuerdes que mi corazón sigue eligiéndote cada día..'
+    ],
     bouquets: true,
   },
 
@@ -114,8 +118,6 @@ export class Dashboard {
     lines: ['Pero no quiero quedarme en el mismo lugar de antes. Estoy buscando las herramientas para cambiar de verdad.'],
     bouquets: true, 
   },
- 
-  ,
   {
     lines: ['Y no es un secreto lo que siento por ti, que te amo y te extraño...']
     ,
@@ -207,7 +209,7 @@ export class Dashboard {
     ,
     corners: [
         {
-          src: '/images/corners/foto (2).jpeg',
+          src: '/images/corners/foto (194).jpg',
           alt: 'fotito_1',
           position: 'top-left',
         },
@@ -470,7 +472,7 @@ lines: [],
 
     corners: [
       {
-        src: '/images/corners/foto (194).jpg',
+        src: '/images/corners/foto_91.jpeg',
         alt: 'fotito_1',
         position: 'top-left',
       },
@@ -520,7 +522,7 @@ lines: [],
       position: 'bottom-left',
     },
     {
-      src: '/images/corners/foto_11.jpeg',
+      src: '/images/corners/foto_90.jpeg',
       alt: 'foto (4)',
       position: 'bottom-right',
     },
