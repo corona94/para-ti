@@ -89,42 +89,35 @@ export class Dashboard {
     bouquets: true,
   },
   {
-    lines: ['Desde el primer día que te conocí, sentí miles de cosas por ti. Hoy sé que el amor no solo se siente, también requiere un trabajo constante.'],
+    lines: ['Desde el primer día que te conocí, sentí miles de cosas por ti. Y tú sabes que es verdad, te lo dije muchas veces con emoción'],
     bouquets: true,
   },
   {
     
-    lines: ['Fueron meses muy difíciles para mí, pero cuando estaba contigo, mi mundo era maravilloso.'],
+    lines: ['Fueron meses muy difíciles para mí, pero cuando estaba contigo, mi mundo cambiaba...'],
     bouquets: true,
   },
   {
-    lines: ['Desgraciadamente, desde mi propia soledad, no supe gestionar mis problemas.'],
-    storm: true,
+    lines: ['No vengo a pedirte una repuesta o que hablemos ya; solo a recordarte que mi corazón sigue eligiéndote'],
+    bouquets: true,
+  },
+
+  {
+    lines: [' No he dejado de pensar en ti, en lo que sucedió y en la necesidad de hablar de frente, sin minimizar tu dolor.'],
+    bouquets: true,
   },
   {
-    lines: ['Me perdí de una manera en la que ni yo mismo me reconocía; me volví alguien grosero y te lastimé.'],
-    storm: true,
+    lines: ['Y tal vez como dice esa canción... Tal vez no sea nuestro momento, tal vez no sea la persona indicada...'],
+    bouquets: true,
   },
   {
-    lines: ['Me duele profundamente haberlo hecho. No he dejado de pensar en ti, en lo que sucedió y en la necesidad de hablar de frente, sin minimizar tu dolor.'],
-    storm: true,
-  },
-  {
-    lines: ['No busco excusas ni validaciones, y mucho menos fingir que no pasó. Mi único deseo real es que podamos sanar.'],
-    storm: true,
-  },
-  {
-    lines: ['Me cegó el ego y no supe escucharte; convertí situaciones en peleas sin sentido cuando solo debí detenerme, escucharte y cuidarte.'],
-    storm: true, 
+    lines: ['Pero se que aún hay algo entre nosotros'],
+    bouquets: true, 
   }
+ 
   ,
   {
-    lines: ['Es difícil cuando uno se analiza y sabe que hay defectos que requieren un trabajo profundo, por no haber sabido enfrentar mis conflictos...'],
-    storm: true,
-  }
-  ,
-  {
-    lines: ['Quería hacerte feliz, pero entendí que no podía ofrecerte paz si no resolvía primero lo que pasaba conmigo. Nada de eso cambia lo que siento: no he dejado, ni dejaré de amarte.']
+    lines: ['Y no es un secreto lo que siento por ti, que te amo y te extraño...']
     ,
     corners: [
         {
@@ -181,7 +174,7 @@ export class Dashboard {
   ,
   {
     // LA INTENCIÓN: El valor de intentarlo y abrir paso a los recuerdos
-    lines: ['Pero al menos sabía que tenía que intentar hablarte con el corazón en la mano, y recordarte por qué valía la pena hacerlo.']
+    lines: ['Pero al menos sabía que tenía que intentarlo una vez más, y recordarte por qué valía la pena hacerlo.']
 
      ,
     corners: [
@@ -210,7 +203,7 @@ export class Dashboard {
   ,
   {
     // Bloque enfocado en la intención pura de querer hablar
-    lines: ['Mi única intención con todo esto es pedirte que nos demos la oportunidad de hablar. Con el corazón en la mano y con la madurez de escucharnos de verdad.']
+    lines: ['Mi única intención con todo esto es pedirte que nos demos la oportunidad de hablar. Con el corazón en la mano y escucharnos de verdad.']
     ,
     corners: [
         {
@@ -236,8 +229,8 @@ export class Dashboard {
       ],
   },
   {
-    // El puente que une tu intención con los recuerdos hermosos que vienen
-    lines: ['Sé que no será fácil y no quiero intervenir en tu proceso de verdad... Pero tenía que intentarlo y no quedarme con los brazos cruzados.']
+    
+    lines: ['Hoy entiendo, con toda claridad, cuánta falta te hicieron mis abrazos, mi cuidado y mi escucha. Me dolió no haber estado a la altura cuando más me necesitabas.']
 
     ,
     corners: [
@@ -308,11 +301,11 @@ export class Dashboard {
   }
    ,
   {
-    lines: ['.', '.', '.', '.', '.', '.','.', '.', '.', '.', '.', '.','.', '.', '.', '.', '.', '.'],
-  }
+    lines: ['.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.',]
+    }
   ,
   {
-    lines: ['¿Y si sí?'],
+    lines: ['¿Por qué no?'],
     bouquets: true,
     musicTrack: 'frankie',
   }
@@ -374,6 +367,16 @@ lines: [],
   {
     lines: ['.', '.', '.', '.', '.', '.','.', '.', '.', '.', '.', '.','.', '.', '.', '.', '.', '.'],
 
+  }
+
+  ,
+  {
+    lines: [''],
+    gallery: [
+      { src: '/images/corners/mariachi.jpeg', alt: 'imagen' },
+    ],
+    hearts: true,
+    bouquets: true,
   }
   ,
   {
