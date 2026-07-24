@@ -174,7 +174,7 @@ export class Dashboard {
   ,
   {
     // LA INTENCIÓN: El valor de intentarlo y abrir paso a los recuerdos
-    lines: ['Pero al menos sabía que tenía que intentarlo una vez más, y recordarte por qué valía la pena hacerlo.']
+    lines: ['Pero al menos sabía que tenía que intentarlo una vez más, y recordarte por qué valía la pena hacerlo...','Y si el destino nos da una oportunidad, me gustaría sanar contigo...']
 
      ,
     corners: [
@@ -456,7 +456,7 @@ lines: [],
   ,
 
   {
-    lines: ['Agradecimientos especiales a ti y, pues, a mí porque me gustó hacer esto para ti.'],
+    lines: ['Agradecimientos especiales a ti, a loba y pues, a mí porque me gustó hacer esto para ti.'],
     bouquets: true,
   }
   
