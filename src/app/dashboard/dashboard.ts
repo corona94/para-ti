@@ -107,13 +107,13 @@ export class Dashboard {
     bouquets: true,
   },
   {
-    lines: ['Y tal vez como dice esa canción... Tal vez no sea nuestro momento, tal vez no sea la persona indicada...'],
+    lines: ['Se que han habido más situaciones dificiles, y claro que he pensado en cada una de ellas.'],
     bouquets: true,
   },
   {
-    lines: ['Pero se que aún hay algo entre nosotros'],
+    lines: ['Pero no quiero quedarme en el mismo lugar de antes. Estoy buscando las herramientas para cambiar de verdad.'],
     bouquets: true, 
-  }
+  },
  
   ,
   {
