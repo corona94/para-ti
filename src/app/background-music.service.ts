@@ -8,7 +8,7 @@ export class BackgroundMusicService {
   private readonly platformId = inject(PLATFORM_ID);
 
   private readonly tracks: Record<MusicTrack, string> = {
-    default: encodeURI('/Musica/daft-punk-something-about-us-official-audio_LoxM4Hnj.mp3'),
+    default: encodeURI('/Musica/john-lennon-woman-sub-espanol-lyrics_DXAUxFja.mp3'),
     frankie: encodeURI('/Musica/Frankie Ruíz - Tú Con Él (Visualizer).mp3'),
   };
 
