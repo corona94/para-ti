@@ -500,7 +500,7 @@ lines: [],
 
 {
   lines: [
-    'Aquí estaré, trabajando en mí y cuidando lo que somos, listo para cuando te sientas lista para hablar.',
+    'Aquí estaré, trabajando en mí y cuidando lo que somos, listo para cuando te sientas lista para hablar. Y tal vez, sanar juntos.',
     'Con todo mi amor, Octavio.'
   ],
   hearts: true,
